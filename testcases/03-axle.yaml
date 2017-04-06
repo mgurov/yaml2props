@@ -1,0 +1,10 @@
+fsp:
+  boqs:
+    host: localhost
+    port: 8060
+    token*: oEb03Vv7PaBfA7eTt+FMs4cbO92MeBfy33HSSA31M8c=.oEb03Vv7PaBfA7eTt+FMs4cbO92MeBfy33HSSA31M8c=.oEb03Vv7PaBfA7eTt+FMs4cbO92MeBfy33HSSA31M8c=
+    urlTrafficQueue: cqueue
+    urlTrafficTopic: ctopic
+  frs:
+    host: localhost
+    port: 7777

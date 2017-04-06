@@ -1,0 +1,9 @@
+key: |
+           multiline
+           values
+           aren't
+           supported
+           by our simplistic
+           property writer
+           could've been though
+           http://stackoverflow.com/questions/8975908/how-to-write-multiple-line-property-value-using-propertiesconfiguration
