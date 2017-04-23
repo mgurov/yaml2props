@@ -8,6 +8,7 @@ script:
 - go test ./...
 - mkdir -p build
 - for os in linux darwin windows; do GOOS=$os GOARCH=amd64 go build -o build/yaml2p.$GOOS.$GOARCH ./cmd/yaml2p; done
+- ls -lah build
 deploy:
   provider: releases
   api_key:
