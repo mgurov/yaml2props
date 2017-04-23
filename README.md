@@ -2,6 +2,16 @@
 
 Simplistic converter between yaml and java properties files.
 
+## Installation 
+
+Download the latest binary from the [github releases archive](https://github.com/mgurov/yaml2props/releases)
+
+## from sources (GO)
+
+````bash
+go install github.com/mgurov/yaml2props/cmd/yaml2p
+````
+
 ### Not supported
 
 * multiline string values
