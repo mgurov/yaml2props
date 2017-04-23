@@ -18,3 +18,4 @@ deploy:
     - build/yaml2p.windows.amd64
   on:
     repo: mgurov/yaml2props
+    tags: true
