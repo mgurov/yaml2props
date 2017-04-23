@@ -1,0 +1,20 @@
+language: go
+go:
+- 1.8.x
+install:
+- go get -u github.com/kardianos/govendor
+- govendor sync
+script:
+- go test ./...
+- mkdir -p build
+- for os in linux darwin windows; do GOOS=$os GOARCH=amd64 go build -o build/yaml2p.$GOOS.$GOARCH ./cmd/yaml2p; done
+deploy:
+  provider: releases
+  api_key:
+    secure: X2GgdGT/rwuDCCqVpTvxpueRRj8qzig1lYahA29Fq5W5PxuaTHS8ZXVP5T/RBHl4BjHzj9khEhuruvM6aYZz4JA1u27qV0HtlRhkITnjOd7fWxQ6rq/RAIU3r/eN1V06421qamhzCNZQm2Pnq3zyuxO9de78c6enJl7l3JkvV9t1lL7UY8ghoo9M2jB2r/hW8XUtTOpp3vUJFm94V6Sz+IGVAk5hEJwHfbHiNSaeftOzUX0VmLSHhvFeE2yCQC3oyo0KHCQFnJY4cCMKppqx+kc3xqQiIJi94YW62R7L2omn1H8KygUhd/1lzHiAhmQUm6h596g3K7fN0heoYZA/F3cJ45GN7Gyyrbz2Y8Ln9KdSR461eKJd2IRnB0JMKI9/JAb07Ao8Ug8nbVXVsB/1oh44XuRRGmK/6TAq8vZ+J76rB6nNiN/Rb+M9P9HioSiRRdU3MncAgk/9Y+dfj1ckMJ90a8Q+Qc40zmzpL55DRyf1PUQg9Xkzj/ruZAzKuMWXOtqikkYzwMVNhB2DfvQ13synip1baqVwfjYuKRnA8pmqYyAgF2lT5glAi+S/N+kk3t1Yst1DD/wyPj5OHh6MP1ECSySrwAMzf6A8FPmjeo3gkmYjDeBoB83Br2X5eV6WVPhVnWC5qo24k2zPnJhnuWAhAmrG0bGNCJ0nVA9b898=
+  file:
+    - build/yaml2p.linux.amd64
+    - build/yaml2p.darwin.amd64
+    - build/yaml2p.windows.amd64
+  on:
+    repo: mgurov/yaml2props
