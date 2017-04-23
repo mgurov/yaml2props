@@ -6,3 +6,8 @@ go:
 install:
   - go get -u github.com/kardianos/govendor
   - govendor sync
+
+script:
+  - go test ./...
+  - mkdir -p build
+  - for os in linux darwin windows; do build GOOS=$os GOARCH=amd64 go build -o build/yaml2p.$GOOS.$GOARCH; done
