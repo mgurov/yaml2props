@@ -8,6 +8,9 @@ script:
 - go test ./...
 - mkdir -p build
 - for os in linux darwin windows; do GOOS=$os GOARCH=amd64 go build -o build/yaml2p.$GOOS.$GOARCH ./cmd/yaml2p; done
+- GOOS=linux GOARCH=amd64 go build -o build/yaml2p.linux.amd64 ./cmd/yaml2p
+- GOOS=windows GOARCH=amd64 go build -o build/yaml2p.windows.amd64 ./cmd/yaml2p
+- GOOS=darwin GOARCH=amd64 go build -o build/yaml2p.darwin.amd64 ./cmd/yaml2p
 - ls -lah build
 deploy:
   provider: releases
