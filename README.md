@@ -10,6 +10,7 @@ Download the latest binary from the [github releases archive](https://github.com
 
 ````bash
 go install github.com/mgurov/yaml2props/cmd/yaml2p
+go install github.com/mgurov/yaml2props/cmd/yaml2p
 ````
 
 ### Not supported
