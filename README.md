@@ -27,3 +27,9 @@ level1.level2.level3=fooe
 ### Quirks
 
 Original key order isn't preserved, alphabetical sorting is used for the consistency sake
+
+## Related art 
+
+Java code https://stackoverflow.com/questions/49207935/how-to-convert-yml-to-properties-with-a-gradle-task 
+
+Java/maven style https://github.com/redlab/yaml-props
